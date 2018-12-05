@@ -1,13 +1,13 @@
 #author : yurdhafahila
 
-import KMeans as km
+# import KMeans as km
 import csv
 from collections import OrderedDict
 import operator
 
 # data training berasal dari data yang telah dilakukan clustering dengan KMeans
 # pada data ini yang digunakan sebagai fitur hanya: duration, stepcount, setcount, remcount, c1count, c2count, c3count, c4count, c5count, c6count, uniqcount, errcount
-dataTraining = km.bestData
+# dataTraining = km.bestData
 keyFitur = [ "duration", "stepcount", "setcount", "remcount", "c1count", "c2count", "c3count", "c4count", "c5count", "c6count", "uniqcount", "errcount"]
 
 def readMyFile(filecsv):
@@ -111,6 +111,7 @@ def setKelompok(data):
     return Kel
 
 #DATA TRAINING
+dataTraining = readMyFile('level1_asg1.csv')
 print("DATA TRAINING")
 print(list(dataTraining[0].keys()))
 for data in dataTraining:
