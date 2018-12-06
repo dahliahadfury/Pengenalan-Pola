@@ -25,7 +25,7 @@ def readMyFile(filecsv):
 
     return data
 
-def manualisasi(data):
+def normalisasi(data):
     tempMax = []
     tempMin = []
     for i in range(len(keyFitur)):
@@ -124,10 +124,10 @@ dataTesting = readMyFile('level1_asg2.csv')
 print(list(dataTesting[0].keys()))
 for data in dataTesting:
 	print(list(data.values()))
-dataTesting = manualisasi(dataTesting)
+dataTesting = normalisasi(dataTesting)
 
 
-dataTraining = manualisasi(dataTraining)
+dataTraining = normalisasi(dataTraining)
 
 for i in range(len(dataTesting)):
     eucDisData1 = euclideanDistance(dataTraining, dataTesting[i])
